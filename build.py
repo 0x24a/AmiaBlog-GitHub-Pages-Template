@@ -1,5 +1,5 @@
-from os import popen, path, mkdir
-from shutil import rmtree, copytree
+from os import popen, path, mkdir, remove
+from shutil import rmtree, copytree, copy
 from json import load
 
 # Read the lock file
@@ -28,3 +28,16 @@ print("- Removing attachments in the build directory")
 rmtree("build/AmiaBlog/attachments")
 print("- Copying attachments to the build directory")
 copytree("attachments", "build/AmiaBlog/attachments")
+print("- Removing config.json in the build directory")
+remove("build/AmiaBlog/config.json")
+print("- Copying config.json to the build directory")
+copy("config.json", "build/AmiaBlog/config.json")
+print("- Initializing virtual environment")
+popen("cd build/AmiaBlog && uv sync").read()
+print("- Running static build")
+popen("cd build/AmiaBlog && uv run staticify.py").read()
+print("- Copying back the distribution")
+copytree("build/AmiaBlog/dist", "dist")
+print("- Cleaning up")
+rmtree("build")
+print("Done")
