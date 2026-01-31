@@ -22,7 +22,7 @@
       "description": "AmiaBlog's Github repository"
     }
   ],
-  "site_language": "zh-CN",
+  "site_language": "en",
   "search_method": "jieba",
   "disable_template_cache": true
 }
