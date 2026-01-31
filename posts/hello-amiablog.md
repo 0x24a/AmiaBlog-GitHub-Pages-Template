@@ -1,4 +1,4 @@
-title: Hello, AmiaBlog on Github Pages
+title: Hello, AmiaBlog on Github Pages!
 date: 2026-02-01
 last_modified: 2026-02-01
 tags: [AmiaBlog, Github Pages]
