@@ -26,8 +26,10 @@ jobs:
       - name: Set up Python
         run: uv python install
 
-      - name: Build project
-        run: uv run build.py
+      - name: Build AmiaBlog
+        run: |
+            uv pip install loguru
+            uv run build.py
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
