@@ -28,6 +28,7 @@ jobs:
 
       - name: Build AmiaBlog
         run: |
+            uv init
             uv venv
             uv add loguru
             uv run build.py
