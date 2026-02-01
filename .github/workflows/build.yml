@@ -28,7 +28,8 @@ jobs:
 
       - name: Build AmiaBlog
         run: |
-            uv pip install loguru --system
+            uv venv
+            uv add loguru
             uv run build.py
 
       - name: Setup Pages
