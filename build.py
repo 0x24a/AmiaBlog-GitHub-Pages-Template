@@ -6,11 +6,11 @@ from json import load
 # Read the lock file
 upstream_url = "https://github.com/0x24a/AmiaBlog.git"
 
-with open('amiablog.lock', 'r') as f:
+with open("amiablog.lock", "r") as f:
     lock = load(f)
-    upstream_version = lock['version']
+    upstream_version = lock["version"]
 
-logger.info(f"Performing AmiaBlog build with version \"{upstream_version}\".")
+logger.info(f'Performing AmiaBlog build with version "{upstream_version}".')
 if path.exists("build"):
     logger.warning("Remove previous build artifacts")
     rmtree("build")
