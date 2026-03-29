@@ -1,3 +1,9 @@
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#     "loguru",
+# ]
+# ///
 from os import popen, path, mkdir, remove
 from shutil import rmtree, copytree, copy
 from loguru import logger
